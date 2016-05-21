@@ -1,0 +1,5 @@
+rootProject.name = 'demo-code'
+
+include 'quote-service'
+include 'relo'
+include 'slf4j'
