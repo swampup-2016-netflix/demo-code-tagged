@@ -1,6 +1,12 @@
+plugins {
+    id 'nebula.resolution-rules' version '1.6.2'
+}
+
 mainClassName = 'swampup.ReloMain'
 
 dependencies {
+    resolutionRules files('src/main/resources/relocation-rules.json')
+
     compile 'com.google.collections:google-collections:1.0'
     compile 'com.google.guava:guava:19.0'
 }
