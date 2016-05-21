@@ -1,8 +1,18 @@
+plugins {
+    id 'nebula.resolution-rules' version '1.6.2'
+}
+
 mainClassName = 'swampup.Slf4jMain'
 
 dependencies {
+    resolutionRules files('src/main/resources/bundle-rules.json')
+
     compile 'org.slf4j:slf4j-log4j12:1.7.21'
     compile 'log4j:log4j:1.2.17'
 
-    compile ('com.netflix:quote-service-bundle:1.0.0')
+    compile ('com.netflix:quote-service:1.0.0') { transitive = false }
+    compile ('com.netflix:quote-service-bundle:1.0.0') {
+        exclude module: 'log4j-over-slf4j'
+        transitive = false
+    }
 }

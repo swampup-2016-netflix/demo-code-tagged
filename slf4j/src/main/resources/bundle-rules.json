@@ -1,3 +1,10 @@
 {
-
+  "deny": [
+    {
+      "module": "com.netflix:quote-service-bundle",
+      "reason": "quote-service-bundle is a bundle that wraps log4j-over-slf4j. See [link] for details.",
+      "author": "nadavc",
+      "date": "2015-10-07T20:21:20.368Z"
+    }
+  ]
 }
